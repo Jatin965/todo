@@ -1,0 +1,22 @@
+{% load static %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'css/base.css' %}">
+	</head>
+	<body>
+		<h3>Update Task</h3>
+		<form method="POST" action="">
+			<div class="container">
+				{% csrf_token %}
+				{% bootstrap_form form %}
+				{# {{form}} #}
+				<input type="submit" name="Update Task">
+			</div>
+		</form>
+	</body>
+</html>
